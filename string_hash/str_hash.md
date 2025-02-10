@@ -129,8 +129,8 @@ if (judge(a, b, 1)) {
 }
 else {
     while (len != 1) {
-        factor[++cnt] = min_primes[len]; // factor[1] = 3; factor[2] = 2 ， 一定是递减地储存进来，因为len在持续减小，额，倒也不一定，len减小不代表min_primes[len]减小，但大致是这个递减的方向。
-        len /= min_primes[len]; // len = 4; 2(退出)， 这一步的目的是找到len 除了其最小质因子（我感觉也不是最小质因子啊，12对应的就是3，为什么不是2呢）另一个因数。
+        factor[++cnt] = min_primes[len]; // factor[1] = 3; factor[2] = 2 ， 一定是递减地储存进来，因为len在持续减小，额，倒也不一定，len减小不代表min_primes[len]减小，但大致是这个递减的方向。不对，因为min_primes[]数组中储存时是从小到大存的，所以，一定是一个非递减的状态存在。
+        len /= min_primes[len]; // len = 4; 2(退出)， 这一步的目的是找到len 除了其最小质因子的另一个因数。
     }
     len = b - a + 1;
     for (LL i = 1; i <= cnt; ++i) {
