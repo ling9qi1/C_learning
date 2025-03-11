@@ -4,8 +4,7 @@
 
 ![alt text](Screenshot_20250311_144719_com.huawei.photos_edit.jpg)
 
-
-## deepseek 
+## Deepseek
 
 为了高效解决该问题，我们可以利用倍增思想预处理跳跃表，快速判断每个位置能否形成连续递增序列，并计算最小跨度。
 
